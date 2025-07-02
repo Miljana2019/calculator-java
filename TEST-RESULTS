@@ -1,1 +1,23 @@
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class CalculatorTest {
+
+    @Test
+    public void testAddition() {
+        String result = Calculator.Run("2+3");
+        assertEquals("5.0", result);
+    }
+
+    @Test
+    public void testMultiplicationPrecedence() {
+        String result = Calculator.Run("2+3*4");
+        assertEquals("14.0", result);
+    }
+}
+
+
+Izvršila sam testiranje po metodi black box - ponašala sam se kao krajnji korisnik gde sam primetila da sve operacije funkcionisu kako treba jedino mi se nije dopao oblik rezultata gde i za cele brojeve dobijam .0 tj. 2+2=4.0 ovo bih korigovala
+Sve sam radila u okruženju IntellJ gde sam kreirala i jedinični test kod koji je gore priložen. Pokrenula sam ga u IntellJ okruženju i dao je pozitivne rezultate da je sve u redu.
+
 
